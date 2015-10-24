@@ -1,0 +1,32 @@
+/*****
+ * THis is multi line comment
+ */
+package com.test;
+
+/**  /* Another multi line comment
+//*****//***/
+
+// Single line comment
+
+/**
+ *
+ */ /****/ // single line comment in the same line as the multi line comment
+public class Hello {
+
+@Inject /*
+comment */
+	private String test = "some /* comment */ 'and' \" other\" " +
+		"string";
+
+    public static final void main(String [] args) { // single line comment in code
+      System./*comment*/out./*comment*/println/*comment*/("Hello/*");
+    }
+}
+
+// This interface contains 3 lines of code
+public interface hasWordCounter {
+    /**
+     * count the number of lines in a file
+     */
+    int countLines(File inFile); 
+}
