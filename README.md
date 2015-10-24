@@ -11,12 +11,13 @@ ASSUMPTIONS:
 - Based on the clarification, any matching letter will be used for the number, not just the first letter.
 - Behaviour will be very similar to http://spellmynumber.mnim.org/ *
 
+Sample Phone Numbers for test: 0280188307, 0467678268, 0230188307
 
 ### Program2
 
-Reverses the words in a String
+Reverses the words in a sentence
 
-Assumptions:
+ASSUMPTIONS:
 - Space is assumed to be delimiter (not word break '\b').
 - Thus "This is a test." will be reversed as "test. a is this" and not as ".test a is this"
 - Also "he is 30-year-old" will be reversed as "30-year-old is he" and not as "old-year-30 is he".

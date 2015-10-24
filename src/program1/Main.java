@@ -19,7 +19,13 @@ public class Main {
         if (phoneNumber.isEmpty() || phoneNumber.length() != 10 || !phoneNumber.matches("[0-9]+")) {
             System.out.println("Invalid input. Please enter 10 digit phone number.");
         } else {
-            WordMatcher.convertDigitToWords(phoneNumber, wordDictionaryContainer).forEach(str -> System.out.println(str));
+            ArrayList<String> result = WordMatcher.convertDigitToWords(phoneNumber, wordDictionaryContainer);
+            if (result == null || result.isEmpty()) {
+                System.out.println("No words found!");
+            } else {
+                System.out.println("\nFound " + result.size() + " word(s)");
+            }
+            result.forEach(str -> System.out.println(str));
         }
     }
 }

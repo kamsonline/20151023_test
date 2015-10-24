@@ -12,7 +12,7 @@ package program2;
 public class ReverseWords {
 
     private static String inputString = "This is a test";
-    private static String DELIMITTER = " ";
+    private static String DELIMITER = " ";
 
     public static void main(String[] args) throws Exception {
         ReverseWords rw = new ReverseWords();
@@ -26,17 +26,17 @@ public class ReverseWords {
      * @return the reversed words as String for the supplied input string.
      */
     public String reverseWords(String input) {
-        // Get the first index of the delimitter for the supplied input string
-        int index = input.indexOf(DELIMITTER);
+        // Get the first index of the delimiter for the supplied input string
+        int index = input.indexOf(DELIMITER);
         // If the index is -1, then it is the end of the string and thus return the input string.
         if (index == -1) {
             return input;
         } else {
             StringBuilder reversedString = new StringBuilder();
-            // Call recursively until there is a delimitter and append the strings using the delimitter.
+            // Call recursively until there is a delimiter and append the strings using the delimiter.
             return reversedString
                     .append(reverseWords(input.substring(index + 1)))
-                    .append(DELIMITTER)
+                    .append(DELIMITER)
                     .append(input.substring(0, index))
                     .toString();
         }
